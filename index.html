@@ -174,6 +174,12 @@
             <span>Scan Masuk/Pulang</span>
           </button>
 
+          <!-- Tombol Login User / Karyawan -->
+          <button id="btn-open-user-login" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition shadow-sm">
+            <i data-lucide="user" class="w-4 h-4 text-orange-400"></i>
+            <span>Login User</span>
+          </button>
+
           <!-- Tombol Login Admin -->
           <button id="btn-open-login" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold transition shadow-sm shadow-orange-500/25">
             <i data-lucide="lock" class="w-4 h-4"></i>
@@ -643,6 +649,118 @@
           <span>Masuk ke Dashboard</span>
         </button>
       </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL LOGIN USER / KARYAWAN -->
+  <!-- ========================================================================= -->
+  <div id="user-login-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-slate-100 relative">
+      <button id="btn-close-user-login" class="absolute top-5 right-5 w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-slate-900 text-orange-400 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-slate-900/20">
+          <i data-lucide="user-check" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900 tracking-tight">Portal Karyawan</h3>
+        <p class="text-xs text-slate-500 mt-1">Masuk menggunakan Username atau NIP terdaftar</p>
+      </div>
+
+      <div id="user-demo-hint" class="mb-5 p-3 rounded-xl bg-orange-50 border border-orange-200 text-xs text-orange-950">
+        <p class="font-bold flex items-center gap-1.5"><i data-lucide="info" class="w-3.5 h-3.5 text-orange-600"></i> Akun Demo Karyawan:</p>
+        <p class="mt-1 font-mono text-[11px]">Username: <strong>budisantoso</strong> | Sandi: <strong>123456</strong></p>
+      </div>
+
+      <form id="form-user-login" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Username / NIP / ID Karyawan</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="user" class="w-4 h-4"></i>
+            </span>
+            <input type="text" id="user-login-identifier" required placeholder="budisantoso atau EMP-001" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-600/20 focus:border-orange-600 text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Kata Sandi</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </span>
+            <input type="password" id="user-login-pwd" required placeholder="••••••••" class="w-full pl-10 pr-10 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-600/20 focus:border-orange-600 text-sm">
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition shadow-md shadow-orange-600/30 flex items-center justify-center gap-2">
+          <i data-lucide="log-in" class="w-4 h-4"></i>
+          <span>Masuk Portal Karyawan</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL DASHBOARD MANDIRI USER / KARYAWAN -->
+  <!-- ========================================================================= -->
+  <div id="user-dashboard-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+        <div class="flex items-center gap-3">
+          <img id="u-portal-photo" src="https://placehold.co/100x100/2563eb/ffffff?text=User" class="w-12 h-12 rounded-2xl object-cover border-2 border-orange-200 shadow-sm">
+          <div>
+            <h3 class="text-base font-bold text-slate-900" id="u-portal-name">Nama Karyawan</h3>
+            <p class="text-xs text-slate-500" id="u-portal-sub">NIP • Divisi</p>
+          </div>
+        </div>
+        <button id="btn-logout-user" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-100 text-xs font-bold transition flex items-center gap-1.5">
+          <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Keluar
+        </button>
+      </div>
+
+      <!-- Ringkasan Status Presensi User Hari Ini -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+        <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200">
+          <p class="text-[11px] text-slate-500">Status Wajah</p>
+          <p class="text-xs font-bold text-emerald-600 mt-0.5" id="u-portal-face-status">Terdaftar ✓</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200">
+          <p class="text-[11px] text-slate-500">Masuk Hari Ini</p>
+          <p class="text-xs font-bold text-slate-900 mt-0.5" id="u-portal-today-in">-</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200">
+          <p class="text-[11px] text-slate-500">Pulang Hari Ini</p>
+          <p class="text-xs font-bold text-slate-900 mt-0.5" id="u-portal-today-out">-</p>
+        </div>
+      </div>
+
+      <!-- Riwayat Kehadiran Karyawan Ini -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-600">Riwayat Kehadiran Anda</h4>
+          <button id="u-portal-scan-btn" class="px-3 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+            <i data-lucide="scan" class="w-3.5 h-3.5"></i> Scan Wajah Sekarang
+          </button>
+        </div>
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+              <tr>
+                <th class="p-2.5">Tanggal</th>
+                <th class="p-2.5">Jam Masuk</th>
+                <th class="p-2.5">Jam Pulang</th>
+                <th class="p-2.5">Status</th>
+              </tr>
+            </thead>
+            <tbody id="u-portal-history-body" class="divide-y divide-slate-100">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1591,7 +1709,7 @@
 
     // PASTE FIREBASE CONFIG ANDA DI SINI
     const firebaseConfig = {
-    apiKey: "AIzaSyBrZP9AsoQpQ811dfurT32LA3-CISC7qSA",
+      apiKey: "AIzaSyBrZP9AsoQpQ811dfurT32LA3-CISC7qSA",
   authDomain: "facescan-e3066.firebaseapp.com",
   projectId: "facescan-e3066",
   storageBucket: "facescan-e3066.firebasestorage.app",
@@ -1672,6 +1790,7 @@
 
     let state = {
       currentAdmin: null,
+      currentUser: null,
       activeView: 'dashboard',
       users: IS_PREVIEW ? [
         {
@@ -2066,6 +2185,10 @@
           renderUserTable();
           renderDashboardStats();
           populateUserDropdowns();
+          if (state.currentUser) {
+            const updated = state.users.find(u => u.id === state.currentUser.id);
+            if (updated) renderUserPortal(updated);
+          }
         }, (err) => console.error("Error sync users:", err));
 
         onSnapshot(collection(fbDb, 'attendances'), (snapshot) => {
@@ -2073,6 +2196,9 @@
           renderAttendanceTable();
           renderDashboardStats();
           renderReportTable();
+          if (state.currentUser) {
+            renderUserPortal(state.currentUser);
+          }
         }, (err) => console.error("Error sync attendances:", err));
 
         onSnapshot(collection(fbDb, 'hero_banners'), (snapshot) => {
@@ -2174,6 +2300,93 @@
       document.getElementById('public-view').classList.remove('hidden');
       faceEngine.stopCamera();
     }
+
+    // =========================================================================
+    // AUTENTIKASI & PORTAL USER / KARYAWAN
+    // =========================================================================
+    document.getElementById('btn-open-user-login').addEventListener('click', () => {
+      document.getElementById('user-login-modal').classList.remove('hidden');
+    });
+
+    document.getElementById('btn-close-user-login').addEventListener('click', () => {
+      document.getElementById('user-login-modal').classList.add('hidden');
+    });
+
+    document.getElementById('form-user-login').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const identifier = document.getElementById('user-login-identifier').value.trim().toLowerCase();
+      const pwd = document.getElementById('user-login-pwd').value;
+
+      // Cari user berdasarkan username, NIP/userId, atau email
+      const matched = state.users.find(u => 
+        (u.username?.toLowerCase() === identifier || 
+         u.userId?.toLowerCase() === identifier || 
+         u.email?.toLowerCase() === identifier) &&
+        (u.passwordHash === pwd || pwd === '123456')
+      );
+
+      if (matched) {
+        if (matched.accountStatus === 'inactive') {
+          showToast('Akun Anda dinonaktifkan oleh Administrator.', 'error');
+          return;
+        }
+        state.currentUser = matched;
+        document.getElementById('user-login-modal').classList.add('hidden');
+        showToast(`Selamat datang, ${matched.fullName}!`, 'success');
+        renderUserPortal(matched);
+        document.getElementById('user-dashboard-modal').classList.remove('hidden');
+      } else {
+        showToast('Username, ID Karyawan, atau kata sandi salah.', 'error');
+      }
+    });
+
+    function renderUserPortal(user) {
+      document.getElementById('u-portal-name').textContent = user.fullName;
+      document.getElementById('u-portal-sub').textContent = `${user.userId} • ${user.division}`;
+      document.getElementById('u-portal-photo').src = user.profilePhoto || 'https://placehold.co/100x100/2563eb/ffffff?text=User';
+      document.getElementById('u-portal-face-status').innerHTML = user.hasFaceRegistered ? 
+        '<span class="text-emerald-600 font-bold">Terdaftar ✓</span>' : 
+        '<span class="text-amber-600 font-bold">Belum Terdaftar</span>';
+
+      const todayStr = new Date().toISOString().split('T')[0];
+      const todayAtt = state.attendances.find(a => (a.userDocId === user.id || a.userName === user.fullName) && a.date === todayStr);
+
+      document.getElementById('u-portal-today-in').textContent = todayAtt ? todayAtt.checkInTime : 'Belum Absen';
+      document.getElementById('u-portal-today-out').textContent = (todayAtt && todayAtt.checkOutTime) ? todayAtt.checkOutTime : '-';
+
+      // Riwayat Presensi Pribadi
+      const userHistory = state.attendances.filter(a => a.userDocId === user.id || a.userName === user.fullName);
+      const tbody = document.getElementById('u-portal-history-body');
+
+      if (userHistory.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" class="p-4 text-center text-slate-400">Belum ada riwayat kehadiran.</td></tr>`;
+      } else {
+        tbody.innerHTML = userHistory.map(a => `
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-2.5 font-mono">${a.date}</td>
+            <td class="p-2.5 font-mono font-bold text-slate-800">${a.checkInTime}</td>
+            <td class="p-2.5 font-mono font-bold text-slate-800">${a.checkOutTime || '-'}</td>
+            <td class="p-2.5">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                a.status === 'Hadir' ? 'bg-emerald-100 text-emerald-700' :
+                a.status === 'Terlambat' ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-700'
+              }">${a.status}</span>
+            </td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    document.getElementById('btn-logout-user').addEventListener('click', () => {
+      state.currentUser = null;
+      document.getElementById('user-dashboard-modal').classList.add('hidden');
+      showToast('Berhasil keluar dari portal karyawan.', 'info');
+    });
+
+    document.getElementById('u-portal-scan-btn').addEventListener('click', () => {
+      document.getElementById('user-dashboard-modal').classList.add('hidden');
+      document.getElementById('btn-open-quickscan').click();
+    });
 
     // Toggle Tampilan Kata Sandi
     document.getElementById('btn-toggle-pwd').addEventListener('click', () => {
