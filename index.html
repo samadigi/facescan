@@ -18,13 +18,13 @@
         extend: {
           colors: {
             brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
             }
           },
           fontFamily: {
@@ -143,21 +143,21 @@
     <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-colors">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
         <a href="#beranda" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform" id="site-logo-container">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-md shadow-orange-500/25 group-hover:scale-105 transition-transform" id="site-logo-container">
             <i data-lucide="scan-face" class="w-6 h-6"></i>
           </div>
           <div>
-            <span class="text-lg font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition" id="public-site-name">PresensiWajah</span>
-            <span class="block text-[10px] font-semibold text-blue-600 uppercase tracking-widest" id="public-company-tag">Sistem Informasi Absensi</span>
+            <span class="text-lg font-black tracking-tight text-slate-900 group-hover:text-orange-600 transition" id="public-site-name">PresensiWajah</span>
+            <span class="block text-[10px] font-semibold text-orange-600 uppercase tracking-widest" id="public-company-tag">Sistem Informasi Absensi</span>
           </div>
         </a>
 
         <!-- Menu Navigasi Desktop -->
         <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-          <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
-          <a href="#tentang" class="hover:text-blue-600 transition">Tentang</a>
-          <a href="#keunggulan" class="hover:text-blue-600 transition">Keunggulan</a>
-          <a href="#panduan" class="hover:text-blue-600 transition">Panduan Absen</a>
+          <a href="#beranda" class="hover:text-orange-600 transition">Beranda</a>
+          <a href="#tentang" class="hover:text-orange-600 transition">Tentang</a>
+          <a href="#keunggulan" class="hover:text-orange-600 transition">Keunggulan</a>
+          <a href="#panduan" class="hover:text-orange-600 transition">Panduan Absen</a>
         </nav>
 
         <!-- CTA & WhatsApp Button -->
@@ -169,13 +169,13 @@
           </a>
 
           <!-- Tombol Scan Cepat Mandiri -->
-          <button id="btn-open-quickscan" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200 text-xs font-bold transition">
+          <button id="btn-open-quickscan" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-50 text-orange-600 hover:bg-orange-100 border border-orange-200 text-xs font-bold transition">
             <i data-lucide="scan" class="w-4 h-4"></i>
             <span>Scan Masuk/Pulang</span>
           </button>
 
           <!-- Tombol Login Admin -->
-          <button id="btn-open-login" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-sm shadow-blue-500/20">
+          <button id="btn-open-login" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold transition shadow-sm shadow-orange-500/25">
             <i data-lucide="lock" class="w-4 h-4"></i>
             <span>Login Admin</span>
           </button>
@@ -193,7 +193,7 @@
             <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80" alt="Face Recognition" class="absolute inset-0 w-full h-full object-cover opacity-35">
             <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full z-10">
-              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold mb-4 backdrop-blur-sm">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-400/30 text-orange-300 text-xs font-semibold mb-4 backdrop-blur-sm">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Presensi Pintar Berbasis AI
               </span>
               <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white max-w-2xl leading-tight">
@@ -203,7 +203,7 @@
                 Transformasi digital presensi instansi Anda dengan teknologi biometrik wajah modern yang dilengkapi deteksi keaslian (liveness detection).
               </p>
               <div class="mt-8 flex flex-wrap gap-4">
-                <button class="btn-carousel-cta px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition shadow-lg shadow-blue-600/30 flex items-center gap-2" data-action="quickscan">
+                <button class="btn-carousel-cta px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition shadow-lg shadow-orange-600/30 flex items-center gap-2" data-action="quickscan">
                   <i data-lucide="camera" class="w-4 h-4"></i>
                   <span>Lakukan Absensi Sekarang</span>
                 </button>
@@ -246,7 +246,7 @@
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80" alt="Laporan Absensi" class="absolute inset-0 w-full h-full object-cover opacity-35">
             <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full z-10">
-              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-xs font-semibold mb-4 backdrop-blur-sm">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-400/30 text-orange-300 text-xs font-semibold mb-4 backdrop-blur-sm">
                 <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i> Dashboard Terpadu & Rekap Otomatis
               </span>
               <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white max-w-2xl leading-tight">
@@ -256,7 +256,7 @@
                 Kelola data karyawan, jadwal kehadiran, jam terlambat, dan cetak laporan resmi instansi hanya dalam sekali klik.
               </p>
               <div class="mt-8 flex flex-wrap gap-4">
-                <button class="px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm transition shadow-lg shadow-purple-600/30 flex items-center gap-2" id="hero-btn-login-shortcut">
+                <button class="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition shadow-lg shadow-orange-600/30 flex items-center gap-2" id="hero-btn-login-shortcut">
                   <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
                   <span>Masuk Dashboard Admin</span>
                 </button>
@@ -275,7 +275,7 @@
 
         <!-- Carousel Indicators (Dots) -->
         <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-20" id="carousel-dots">
-          <button class="carousel-dot w-8 h-2 rounded-full bg-blue-500 transition-all" data-slide="0"></button>
+          <button class="carousel-dot w-8 h-2 rounded-full bg-orange-500 transition-all" data-slide="0"></button>
           <button class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-slide="1"></button>
           <button class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-slide="2"></button>
         </div>
@@ -441,9 +441,25 @@
               Platform sistem informasi absensi modern berbasis teknologi pengenalan biometrik wajah (Face Recognition) yang dirancang untuk efisiensi, akurasi, dan transparansi presensi kerja.
             </p>
             <div class="flex items-center gap-3 pt-2">
-              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-ig"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-fb"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-li"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-ig" title="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-fb" title="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white flex items-center justify-center transition border border-slate-800" id="footer-li" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -1571,11 +1587,11 @@
     // =========================================================================
     // KONFIGURASI APLIKASI
     // Ubah menjadi false SAAT DEPLOY / PUBLISH agar terhubung murni ke Firebase tanpa data dummy
-    const IS_PREVIEW = false;
+    const IS_PREVIEW = true;
 
     // PASTE FIREBASE CONFIG ANDA DI SINI
     const firebaseConfig = {
-      apiKey: "AIzaSyBrZP9AsoQpQ811dfurT32LA3-CISC7qSA",
+    apiKey: "AIzaSyBrZP9AsoQpQ811dfurT32LA3-CISC7qSA",
   authDomain: "facescan-e3066.firebaseapp.com",
   projectId: "facescan-e3066",
   storageBucket: "facescan-e3066.firebasestorage.app",
@@ -1621,6 +1637,39 @@
     // IN-MEMORY STATE STORE (DIPAKAI SAAT IS_PREVIEW = TRUE)
     // Maksimal 2 data dummy krusial untuk demonstrasi
     // =========================================================================
+    const DEFAULT_BANNERS = [
+      {
+        id: 'slide_1',
+        title: 'Absensi Scan Wajah Cepat, Akurat & Bebas Titip Absen',
+        description: 'Transformasi digital presensi instansi Anda dengan teknologi biometrik wajah modern yang dilengkapi deteksi keaslian (liveness detection).',
+        imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80',
+        ctaText: 'Lakukan Absensi Sekarang',
+        ctaLink: '#panduan',
+        order: 1,
+        isActive: true
+      },
+      {
+        id: 'slide_2',
+        title: 'Anti-Spoofing & Validasi Keaslian Wajah Real-Time',
+        description: 'Mencegah kecurangan absensi menggunakan foto cetak atau rekaman layar. Sistem memvalidasi ekspresi dan kedipan secara akurat.',
+        imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80',
+        ctaText: 'Uji Coba Scan Wajah',
+        ctaLink: '#panduan',
+        order: 2,
+        isActive: true
+      },
+      {
+        id: 'slide_3',
+        title: 'Rekap Kehadiran Real-time & Export Laporan PDF/Excel',
+        description: 'Kelola data karyawan, jadwal kehadiran, jam terlambat, dan cetak laporan resmi instansi hanya dalam sekali klik.',
+        imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
+        ctaText: 'Masuk Dashboard Admin',
+        ctaLink: '#login',
+        order: 3,
+        isActive: true
+      }
+    ];
+
     let state = {
       currentAdmin: null,
       activeView: 'dashboard',
@@ -1686,38 +1735,7 @@
           confidenceScore: 97.8
         }
       ] : [],
-      banners: [
-        {
-          id: 'slide_1',
-          title: 'Absensi Scan Wajah Cepat, Akurat & Bebas Titip Absen',
-          description: 'Transformasi digital presensi instansi Anda dengan teknologi biometrik wajah modern yang dilengkapi deteksi keaslian (liveness detection).',
-          imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80',
-          ctaText: 'Lakukan Absensi Sekarang',
-          ctaLink: '#panduan',
-          order: 1,
-          isActive: true
-        },
-        {
-          id: 'slide_2',
-          title: 'Anti-Spoofing & Validasi Keaslian Wajah Real-Time',
-          description: 'Mencegah kecurangan absensi menggunakan foto cetak atau rekaman layar. Sistem memvalidasi ekspresi dan kedipan secara akurat.',
-          imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80',
-          ctaText: 'Uji Coba Scan Wajah',
-          ctaLink: '#panduan',
-          order: 2,
-          isActive: true
-        },
-        {
-          id: 'slide_3',
-          title: 'Rekap Kehadiran Real-time & Export Laporan PDF/Excel',
-          description: 'Kelola data karyawan, jadwal kehadiran, jam terlambat, dan cetak laporan resmi instansi hanya dalam sekali klik.',
-          imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
-          ctaText: 'Masuk Dashboard Admin',
-          ctaLink: '#login',
-          order: 3,
-          isActive: true
-        }
-      ],
+      banners: [...DEFAULT_BANNERS],
       webConfig: {
         siteName: 'PresensiWajah',
         companyName: 'PT Inovasi Teknologi Presensi',
@@ -1726,7 +1744,7 @@
         email: 'admin@presensiwajah.id',
         address: 'Gedung Pusat Teknologi & Inovasi, Jakarta, Indonesia',
         workStartTime: '08:00',
-        primaryColor: '#2563eb',
+        primaryColor: '#ea580c',
         themeMode: 'light'
       },
       footerConfig: {
@@ -2026,6 +2044,11 @@
         document.getElementById('preview-mode-banner').classList.add('hidden');
         document.getElementById('demo-login-hint').classList.add('hidden');
 
+        // Pastikan render banner dan UI dasar tetap berjalan sejak awal
+        renderBanners();
+        applyWebConfig();
+        applyFooterConfig();
+
         // Dengarkan sesi Auth Firebase
         onAuthStateChanged(fbAuth, (user) => {
           if (user) {
@@ -2054,10 +2077,19 @@
 
         onSnapshot(collection(fbDb, 'hero_banners'), (snapshot) => {
           if (!snapshot.empty) {
-            state.banners = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            state.banners = snapshot.docs
+              .map(doc => ({ id: doc.id, ...doc.data() }))
+              .sort((a, b) => (a.order || 0) - (b.order || 0));
+            renderBanners();
+          } else {
+            // Jika koleksi hero_banners belum pernah dibuat, gunakan banner default
+            state.banners = [...DEFAULT_BANNERS];
             renderBanners();
           }
-        }, (err) => console.error("Error sync banners:", err));
+        }, (err) => {
+          console.error("Error sync banners:", err);
+          renderBanners();
+        });
 
         onSnapshot(doc(fbDb, 'app_settings', 'web_config'), (docSnap) => {
           if (docSnap.exists()) {
@@ -2221,7 +2253,7 @@
           <img src="${slide.imageUrl}" alt="${slide.title}" class="absolute inset-0 w-full h-full object-cover opacity-35">
           <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full z-10">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold mb-4 backdrop-blur-sm">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-400/30 text-orange-300 text-xs font-semibold mb-4 backdrop-blur-sm">
               <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Presensi Biometrik Modern
             </span>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white max-w-2xl leading-tight">
@@ -2231,7 +2263,7 @@
               ${slide.description}
             </p>
             <div class="mt-8 flex flex-wrap gap-4">
-              <a href="${slide.ctaLink}" class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition shadow-lg shadow-blue-600/30 flex items-center gap-2">
+              <a href="${slide.ctaLink}" class="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition shadow-lg shadow-orange-600/30 flex items-center gap-2">
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 <span>${slide.ctaText}</span>
               </a>
@@ -2262,7 +2294,7 @@
 
       dots.forEach((d, idx) => {
         if (idx === index) {
-          d.className = 'carousel-dot w-8 h-2 rounded-full bg-blue-500 transition-all';
+          d.className = 'carousel-dot w-8 h-2 rounded-full bg-orange-500 transition-all';
         } else {
           d.className = 'carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all';
         }
@@ -2272,22 +2304,37 @@
     }
 
     function nextSlide() {
-      const total = state.banners.length;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const total = slides.length || (state.banners ? state.banners.length : 3);
+      if (total <= 1) return;
       showSlide((currentSlide + 1) % total);
     }
 
     function prevSlide() {
-      const total = state.banners.length;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const total = slides.length || (state.banners ? state.banners.length : 3);
+      if (total <= 1) return;
       showSlide((currentSlide - 1 + total) % total);
     }
 
     function resetCarouselTimer() {
       if (carouselTimer) clearInterval(carouselTimer);
-      carouselTimer = setInterval(nextSlide, 6000);
+      carouselTimer = setInterval(nextSlide, 5000);
     }
 
     document.getElementById('carousel-next').addEventListener('click', () => { nextSlide(); resetCarouselTimer(); });
     document.getElementById('carousel-prev').addEventListener('click', () => { prevSlide(); resetCarouselTimer(); });
+
+    // Hentikan sementara timer saat kursor mouse di atas carousel untuk kenyamanan user
+    const carouselWrapper = document.getElementById('carousel-slides-wrapper');
+    if (carouselWrapper) {
+      carouselWrapper.addEventListener('mouseenter', () => {
+        if (carouselTimer) clearInterval(carouselTimer);
+      });
+      carouselWrapper.addEventListener('mouseleave', () => {
+        resetCarouselTimer();
+      });
+    }
 
     // Pengaturan Banner di Dashboard Admin
     let selectedBannerIdx = 0;
